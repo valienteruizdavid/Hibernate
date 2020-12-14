@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="hibernate.RegistreCinema" table="pelicula" catalog="cine" optimistic-lock="version">
+        <id name="idPelicula" type="java.lang.Integer">
+            <column name="idPelicula" />
+            <generator class="native" />
+        </id>
+        <property name="duracionPelicula" type="double">
+            <column name="duracionPelicula" />
+        </property>
+        <property name="pelicula3D" type="boolean">
+            <column name="pelicula3D" />
+        </property>
+        <property name="salaCine" type="char">
+            <column name="salaCine"/>
+        </property>
+        <property name="nombrePelicula" type="string">
+            <column name="nombrePelicula" />
+        </property>
+        <property name="fechaEstreno" type="date">
+            <column name="fechaEstreno"/>
+        </property>
+    </class>
+</hibernate-mapping>
